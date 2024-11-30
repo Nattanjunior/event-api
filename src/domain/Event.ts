@@ -2,16 +2,21 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('event')
 export class EvenT {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn("uuid")
   private id!: number;
-  @Column()
+
+  @Column("varchar", { length: 100 })
   private title!: string;
-  @Column()
+
+  @Column("varchar", { length: 250 })
   private description!: string;
-  @Column()
+
+  @Column("varchar", { length: 100 })
   private imgUrl!: string;
-  @Column()
+
+  @Column("boolean")
   private remote!: boolean;
-  @Column()
+
+  @Column("timestamp")
   private Date!: Date;
 }
