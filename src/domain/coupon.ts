@@ -4,13 +4,16 @@ import { EvenT } from "./Event";
 
 @Entity('coupon')
 export class Coupon {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn("uuid")
   private id!: number;
-  @Column()
+
+  @Column("varchar", { length: 100 })
   private code!: string;
-  @Column()
+
+  @Column("integer")
   private discount!: string;
-  @Column()
+
+  @Column("timestamp")
   private valid!: Date;
 
   @ManyToOne(() => EvenT, (event) => event)
