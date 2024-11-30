@@ -2,19 +2,25 @@
   "name": "backend-events",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx --watch src/server/server.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "pg": "^8.13.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
     "typeorm": "^0.3.20"
   },
   "devDependencies": {
+    "@types/express": "^5.0.0",
     "@types/node": "^22.10.1",
+    "express": "^4.21.1",
     "typescript": "^5.7.2"
   }
 }
